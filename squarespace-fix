@@ -1,0 +1,53 @@
+/* Squarespace Flexbox Compatibility
+------------------------------------*/
+
+body.sqs-edit-mode-active #sections,
+body.sqs-edit-mode-active .page-regions > .region:has(> .page-section) {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+}
+
+body.sqs-edit-mode-active #sections > .page-section,
+body.sqs-edit-mode-active .page-regions > .region > .page-section {
+  width: 100% !important;
+  position: relative !important;
+}
+
+
+/* Flexbox
+------------------------------------*/
+
+#sections,
+.sections,
+.page-regions > .region:has(> .page-section) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-section {
+  width: 100%;
+}
+
+
+/* Mobile
+------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+
+  #sections,
+  .sections,
+  .page-regions > .region:has(> .page-section) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+}
+
+
+/* Content Wrapper
+------------------------------------*/
+
+.page-section > .content-wrapper {
+  box-sizing: border-box !important;
+}
