@@ -1,0 +1,29 @@
+# Squarespace Compatibility
+
+A shared compatibility library for SERV Squarespace websites.
+
+## Files
+
+### squarespace-fix.css
+Contains CSS compatibility fixes for Squarespace platform updates.
+
+### squarespace-fix.js
+Contains JavaScript compatibility fixes for Squarespace platform updates.
+
+## Usage
+
+Add to Squarespace Header Injection:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codemilk-io/squarespace-scripts@main/squarespace-fix.css">
+<script defer src="https://cdn.jsdelivr.net/gh/codemilk-io/squarespace-scripts@main/squarespace-fix.js"></script>
+```
+
+## Changelog
+
+### v1.0.0
+- Initial compatibility release
+- Flexbox compatibility for new `.page-regions`
+- Backwards compatibility with `#sections`
+- Mobile stacking compatibility
+- `data-current-styles` normalisation
