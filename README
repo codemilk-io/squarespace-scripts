@@ -4,26 +4,43 @@ A shared compatibility library for SERV Squarespace websites.
 
 ## Files
 
-### squarespace-fix.css
+### `squarespace-fix.css`
+
 Contains CSS compatibility fixes for Squarespace platform updates.
 
-### squarespace-fix.js
+Currently includes:
+
+- Compatibility with the new `.page-regions > .region` structure
+- Backwards compatibility with `.sections` and `#sections`
+- Edit mode stacking
+- Mobile stacking
+- Content wrapper box sizing
+
+### `squarespace-fix.js`
+
 Contains JavaScript compatibility fixes for Squarespace platform updates.
+
+Currently includes:
+
+- `data-current-styles` formatting normalisation
 
 ## Usage
 
-Add to Squarespace Header Injection:
+Add to Squarespace Header Code Injection:
 
 ```html
+<!-- Squarespace Compatibility -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codemilk-io/squarespace-scripts@main/squarespace-fix.css">
+
 <script defer src="https://cdn.jsdelivr.net/gh/codemilk-io/squarespace-scripts@main/squarespace-fix.js"></script>
 ```
 
 ## Changelog
 
 ### v1.0.0
-- Initial compatibility release
-- Flexbox compatibility for new `.page-regions`
-- Backwards compatibility with `#sections`
-- Mobile stacking compatibility
-- `data-current-styles` normalisation
+
+- Added Flexbox compatibility for the new `.page-regions` structure
+- Added backwards compatibility with `.sections` and `#sections`
+- Added edit mode stacking
+- Added mobile stacking
+- Added `data-current-styles` normalisation
